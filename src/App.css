@@ -1,0 +1,76 @@
+@layer tailwind-base, primereact, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.password-field-wrapper {
+  position: relative;
+}
+
+.toggle-password-visibility {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0; /* This stretches the button to the full height of the parent */
+  border: none;
+  background: transparent;
+  padding-right: 1rem; /* This value should be adjusted based on your design */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Styling for InputText to make room for the button */
+.password-field-wrapper .p-inputtext {
+  padding-right: 2.5rem; /* Adjust the padding to ensure the text doesn't go under the button */
+}
+
+/* Additional styles for the button or icon */
+.toggle-password-visibility:hover {
+  background: rgb(34, 165, 241); /* Example hover effect */
+}
